@@ -1,0 +1,14 @@
+overwrite: true
+schema: "http://localhost:5000/graphql"
+documents: "./src/**/**/query.ts"
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      skipTypename: false,
+      withHooks: true,
+      withHOC: false,
+      withComponent: false,
