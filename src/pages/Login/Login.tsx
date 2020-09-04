@@ -79,7 +79,7 @@ const Login: React.FC = () => {
             </label>
             <input
               className="appearance-none block w-full bg-grey-lighter text-gray-900 border border-red rounded py-3 px-4 mb-3"
-              id="grid-first-name"
+              id="email"
               type="text"
               name="email"
               value={String(loginState.email)}
@@ -93,7 +93,7 @@ const Login: React.FC = () => {
             </label>
             <input
               className="appearance-none block w-full bg-grey-lighter text-gray-900 border border-grey-lighter rounded py-3 px-4"
-              id="grid-last-name"
+              id="password"
               type="password"
               name="password"
               value={String(loginState.password)}

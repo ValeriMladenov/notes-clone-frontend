@@ -1,6 +1,6 @@
 import React from "react";
 import { AlertProp } from "./interfaces";
-const Alert = ({ title, desc }: AlertProp) => {
+const Alert = ({ title, desc }: AlertProp): JSX.Element => {
   return (
     <div
       className="bg-red-100 mb-6 border-t-4 border-red-500 rounded-b text-red-900 px-4 py-3 shadow-md"

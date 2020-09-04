@@ -56,7 +56,7 @@ const Notes: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       updateNote();
-    }, 5000);
+    }, 7000);
     return () => clearInterval(interval);
   });
 
@@ -87,7 +87,6 @@ const Notes: React.FC = () => {
             </button>
           </div>
         </div>
-        {/* content */}
         {notes?.feed.map((note) => (
           <div
             key={note.id}
@@ -110,9 +109,7 @@ const Notes: React.FC = () => {
       </div>
       <div className="flex-1 flex overflow-hidden bg-gray-200">
         <div className="flex-1">
-          <div className="text-center mt-4 text-gray-700">
-            {/* {NoteDataEdit.createdAt.toLocaleDateString()} */}
-          </div>
+          <div className="text-center mt-4 text-gray-700"></div>
           <textarea
             className=" overflow-y-scroll mt-4 h-full w-full bg-gray-200 p-10 outline-none"
             name="description"

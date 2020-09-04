@@ -1,11 +1,6 @@
-/*!
-Copyright (c) Valeri Mladenov.
-All rights reserved.
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import Apollo from "./Apollo";
 import "./index.css";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<Apollo />, document.getElementById("root"));
