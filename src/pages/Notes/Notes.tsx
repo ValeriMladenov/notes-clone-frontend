@@ -56,7 +56,7 @@ const Notes: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       updateNote();
-    }, 10000);
+    }, 5000);
     return () => clearInterval(interval);
   });
 
@@ -92,14 +92,18 @@ const Notes: React.FC = () => {
           <div
             key={note.id}
             onClick={() => selectNote(note.id)}
-            className="p-4 border-t border-b bg-orange-200"
+            className={
+              "p-4 border-t border-b " +
+              (NoteDataEdit.id === note.id ? "bg-orange-200" : "")
+            }
           >
             <div className="text-2xl text-gray-900 font-bold">
-              {note.content?.replace(/ .*/, "")}
+              {note.content ? note.content?.replace(/ .*/, "") : "Draft"}
             </div>
-            <div className="text-1xl text-gray-500">
-              <span className="text-gray-800 pr-5">{note.createdAt}</span>
-              desc
+            <div className="text-sm text-gray-300">
+              <span className="text-gray-800 pr-5">
+                {note.createdAt.replace("T", " ").replace("Z", "")}
+              </span>
             </div>
           </div>
         ))}
