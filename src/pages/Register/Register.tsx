@@ -3,7 +3,7 @@ import Alert from "../../components/Alert/Alert";
 import { AlertProp } from "../../components/Alert/interfaces";
 import { RegisterFields } from "./interfaces";
 import { useSignUpMutation } from "../../generated/graphql";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 const Register: React.FC = () => {
   const history = useHistory();
   const [FieldErrors, setFieldErrors] = useState<AlertProp>({
@@ -134,12 +134,12 @@ const Register: React.FC = () => {
           </div>
         </div>
         <div className="flex items-center justify-between">
-          <a
+          <Link
             className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
-            href="/login"
+            to="/login"
           >
             Login?
-          </a>
+          </Link>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
